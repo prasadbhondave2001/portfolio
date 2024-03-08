@@ -83,18 +83,36 @@ section {
     padding: 10rem 9% 2rem;
 }
 
-.home {
+.home-content {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 9%;
-    background: url("images/font_copie.jpg") no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.home-content {
-    max-width: 60rem;
-    z-index: 99;
+.content {
+    flex: 1;
+    max-width: 60%;
+}
+
+.image {
+    max-width: 40%;
+    height: auto;
+}
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+
+    .image {
+        max-width: 60%;
+        order: 2;
+    }
 }
 
 .home-content h1 {
